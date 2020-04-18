@@ -1,5 +1,7 @@
 package com.glg.app.core_lib;
 
+import android.app.Activity;
+import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 
@@ -51,6 +53,9 @@ public class UpdateHelper {
         intent.putExtra("force",isForce);
         intent.putExtra("app_version",versionName);
         intent.putExtra("update_info",updateDes);
+        if(context instanceof Application){
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        }
         context.startActivity(intent);
     }
 
