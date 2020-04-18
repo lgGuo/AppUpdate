@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="40dp"
+    android:paddingEnd="40dp">
+
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_top"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/app_update_background"
+        app:layout_constraintDimensionRatio="w,386:284"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发现新版本!"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_top"
+        app:layout_constraintEnd_toEndOf="@+id/iv_top"
+        app:layout_constraintStart_toStartOf="@+id/iv_top"
+        app:layout_constraintTop_toTopOf="@+id/iv_top" />
+
+    <TextView
+        android:id="@+id/app_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView6"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        tools:text="V2.0" />
+
+
+    <TextView
+        android:id="@+id/tv_update_info"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/app_update_content"
+        android:lineSpacingExtra="6dp"
+        android:padding="16dp"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_version"
+        tools:text="1.新增在线问诊功能2.添加个人信息管理3.优化登录交互功能" />
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/app_update_download"
+        android:gravity="center"
+        android:text="立即升级"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        app:layout_constraintTop_toBottomOf="@+id/iv_top"
+        android:id="@+id/line"
+        android:background="#FFFFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/iv_top"
+        app:layout_constraintStart_toStartOf="@+id/iv_top"
+        android:layout_width="1dp"
+        android:layout_height="32dp"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:src="@mipmap/icon_close_dialog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/iv_top"
+        app:layout_constraintStart_toStartOf="@+id/iv_top"
+        app:layout_constraintTop_toBottomOf="@+id/line" />
+</androidx.constraintlayout.widget.ConstraintLayout>
